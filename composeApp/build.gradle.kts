@@ -13,17 +13,12 @@ plugins {
     alias(libs.plugins.composeHotReload)
 //    id("ksp-convention")
 //    id("kotlin-jvm-convention")
-//    id("android-application-convention")
+    id("android-application-convention")
 }
 
 kotlin {
-    androidTarget {
-        @OptIn(ExperimentalKotlinGradlePluginApi::class)
-        compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_11)
-        }
-    }
-    
+    androidTarget()
+
     listOf(
         iosX64(),
         iosArm64(),
