@@ -11,8 +11,8 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
-//    id("ksp-convention")
-//    id("kotlin-jvm-convention")
+    id("ksp-convention")
+    id("kotlin-jvm-convention")
     id("android-application-convention")
 }
 
