@@ -1,3 +1,5 @@
+import ext.libs
+
 /*
  *    Copyright 2024 Adetunji Dahunsi
  *
@@ -22,7 +24,7 @@ android {
     commonConfiguration(this)
 
     defaultConfig {
-        targetSdk = 35
+        targetSdk = libs.findVersion("android-targetSdk").get().toString().toInt()
     }
 }
 
