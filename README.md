@@ -1,4 +1,4 @@
-This rebuild is an exercise for me to learn how to build KMM apps that follow the Modern Android Development Architecture. Its based of the [Heron](https://github.com/tunjid/heron).
+This rebuild is an exercise for me to learn how to build KMM apps that follow the Modern Android Development Architecture. Its based of the [Heron](https://github.com/tunjid/heron) project.
 
 
 
