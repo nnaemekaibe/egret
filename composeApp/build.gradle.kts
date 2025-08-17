@@ -11,19 +11,14 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
-//    id("ksp-convention")
-//    id("kotlin-jvm-convention")
-//    id("android-application-convention")
+    id("ksp-convention")
+    id("kotlin-jvm-convention")
+    id("android-application-convention")
 }
 
 kotlin {
-    androidTarget {
-        @OptIn(ExperimentalKotlinGradlePluginApi::class)
-        compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_11)
-        }
-    }
-    
+    androidTarget()
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -35,10 +30,10 @@ kotlin {
         }
     }
     
-    jvm("desktop")
+    jvm()
     
     sourceSets {
-        val desktopMain by getting
+//        val desktopMain by getting
 
         androidMain.dependencies {
             implementation(compose.preview)
@@ -65,7 +60,7 @@ kotlin {
 //            implementation(libs.okio)
 
 
-//            implementation(project(":data-core"))
+            implementation(project(":data-core"))
 
         }
         commonTest.dependencies {
@@ -146,7 +141,7 @@ compose.desktop {
 }
 
 configurations {
-    getByName("desktopMainApi").exclude(
+    getByName("jvmMainApi").exclude(
         group = "org.jetbrains.kotlinx",
         module = "kotlinx-coroutines-android"
     )
