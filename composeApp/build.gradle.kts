@@ -30,10 +30,10 @@ kotlin {
         }
     }
     
-    jvm("desktop")
+    jvm()
     
     sourceSets {
-        val desktopMain by getting
+//        val desktopMain by getting
 
         androidMain.dependencies {
             implementation(compose.preview)
@@ -60,7 +60,7 @@ kotlin {
 //            implementation(libs.okio)
 
 
-//            implementation(project(":data-core"))
+            implementation(project(":data-core"))
 
         }
         commonTest.dependencies {
@@ -141,7 +141,7 @@ compose.desktop {
 }
 
 configurations {
-    getByName("desktopMainApi").exclude(
+    getByName("jvmMainApi").exclude(
         group = "org.jetbrains.kotlinx",
         module = "kotlinx-coroutines-android"
     )

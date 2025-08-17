@@ -10,7 +10,7 @@ fun Project.configureKotlinMultiplatform(
 ){
     kotlinMultiplatformExtension.apply {
         androidTarget()
-        jvm("desktop")
+        jvm()
         iosX64()
         iosArm64()
         iosSimulatorArm64()
@@ -31,7 +31,7 @@ fun Project.configureKotlinMultiplatform(
 
             named("commonMain"){
                 dependencies {
-                    implementation(versionCatalog.findLibrary("compose-runtime").get())
+                    implementation(libs.findLibrary("compose-runtime").get())
                 }
             }
         }
