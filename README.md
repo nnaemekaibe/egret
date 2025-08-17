@@ -1,3 +1,7 @@
+This rebuild is an exercise for me to learn how to build KMM apps that follow the Modern Android Development Architecture. Its based of the [Heron](https://github.com/tunjid/heron).
+
+
+
 This is a Kotlin Multiplatform project targeting Android, iOS, Desktop (JVM).
 
 * [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
@@ -11,6 +15,3 @@ This is a Kotlin Multiplatform project targeting Android, iOS, Desktop (JVM).
 
 * [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
   you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
-
-
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
