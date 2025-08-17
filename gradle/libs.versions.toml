@@ -12,7 +12,7 @@ androidx-testExt = "1.2.1"
 composeHotReload = "1.0.0-beta04"
 composeMultiplatform = "1.8.2"
 junit = "4.13.2"
-kotlin = "2.2.0"
+kotlin = "2.2.10"
 kotlinx-coroutines = "1.10.2"
 room = "2.7.2"
 coroutines = "1.10.2"
@@ -24,9 +24,12 @@ androidx-room = "2.7.2"
 jetbrainsKotlinJvm = "2.2.10"
 metro = "0.5.5"
 ksp = "2.2.0-2.0.2"
+android-desugar-jdk-libs = "2.1.5"
 
 
 [libraries]
+android-desugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "android-desugar-jdk-libs" }
+
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
