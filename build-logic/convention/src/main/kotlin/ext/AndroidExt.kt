@@ -1,5 +1,6 @@
 
 import com.android.build.api.dsl.CommonExtension
+import ext.libs
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalog
 import org.gradle.api.artifacts.VersionCatalogsExtension
@@ -12,7 +13,7 @@ fun Project.commonConfiguration(
 
     defaultConfig {
         // Could have been 21, but I need sqlite 3.24.0 for upserts
-        minSdk = 30
+        minSdk = libs.findVersion("android-minSdk").get().toString().toInt()
     }
 
     compileOptions {
