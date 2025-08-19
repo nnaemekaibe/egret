@@ -16,7 +16,10 @@ kotlin{
             dependencies{
                 api(project(":di"))
                 implementation(libs.kotlinx.datetime)
-//                implementation(libs.kotlinx.serialization)
+                implementation(libs.kotlinx.serialization.cbor)
+                implementation(libs.kotlinx.serialization.protobuf)
+
+                implementation(libs.ktor.client.core)
             }
         }
         commonTest{
