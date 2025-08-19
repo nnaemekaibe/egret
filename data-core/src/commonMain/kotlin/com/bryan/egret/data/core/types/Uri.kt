@@ -16,6 +16,14 @@ sealed interface Uri {
 
 @Serializable
 @JvmInline
+value class ImageUri(
+    override val uri: String
+): Uri{
+    override fun toString(): String = uri
+}
+
+@Serializable
+@JvmInline
 value class PostUri(
     override val uri: String
 ): Uri{
@@ -33,6 +41,44 @@ value class FeedGeneratorUri(
 @Serializable
 @JvmInline
 value class GenericUri(
+    override val uri: String
+): Uri{
+    override fun toString(): String = uri
+}
+
+
+@Serializable
+@JvmInline
+value class StarterPackUri(
+    override val uri: String
+): Uri{
+    override fun toString(): String = uri
+}
+
+
+
+@Serializable
+@JvmInline
+value class ListMemberUri(
+    override val uri: String
+): Uri{
+    override fun toString(): String = uri
+}
+
+
+
+@Serializable
+@JvmInline
+value class ProfileUri(
+    override val uri: String
+): Uri{
+    override fun toString(): String = uri
+}
+
+
+@Serializable
+@JvmInline
+value class ListUri(
     override val uri: String
 ): Uri{
     override fun toString(): String = uri
